@@ -10,6 +10,7 @@ public class GetterSetter {
     public void setName(String newName) {
         this.name = newName;
     }
+
     public static void main(String[] args) {
         GetterSetter myObj = new GetterSetter();
         myObj.setName("John"); // Set the value of the name variable to "John"

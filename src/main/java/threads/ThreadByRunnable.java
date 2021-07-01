@@ -10,10 +10,10 @@ public class ThreadByRunnable implements Runnable {
     }
 
     public static void main(String[] args) {
-        Thread new_one = new Thread(new ThreadByRunnable());
-        Thread new_two = new Thread(new ThreadByRunnable());
-        new_one.start();
-        new_two.start();
+        Thread new_one = new Thread(new ThreadByRunnable()); //Создание потока new_one
+        Thread new_two = new Thread(new ThreadByRunnable()); //Создание потока new_two
+        new_one.start(); //Запуск потока
+        new_two.start(); //Запуск потока
     }
 
 }

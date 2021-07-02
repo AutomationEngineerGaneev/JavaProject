@@ -1,4 +1,6 @@
-public class InheritanceExt extends Inheritance  {
+package inheritance1;
+
+public class InheritanceExt extends Inheritance {
     private String modelName = "Mustang";    // Car attribute
     public static void main(String[] args) {
 

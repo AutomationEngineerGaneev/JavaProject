@@ -2,9 +2,14 @@ public class Constructors {
     int modelYear;
     String modelName;
 
-    public Constructors(int year, String name) {
-        modelYear = year;
-        modelName = name;
+//    public Constructors1(int year, String name) {
+//        modelYear = year;
+//        modelName = name;
+//    }
+
+    public Constructors(int modelYear, String modelName) {
+        this.modelYear = modelYear;
+        this.modelName = modelName;
     }
 
     public static void main(String[] args) {

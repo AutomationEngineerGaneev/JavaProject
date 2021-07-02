@@ -1,3 +1,5 @@
+package interface1;
+
 public class InterfaceImpl implements Interface {
     public void animalSound() {
         // The body of animalSound() is provided here

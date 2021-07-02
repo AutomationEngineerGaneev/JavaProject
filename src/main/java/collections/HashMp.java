@@ -2,6 +2,9 @@ package collections;
 
 import java.util.HashMap;
 
+//    интерфейс Map не относят к коллекции.
+//    в коллекции элемент данных представляет определенный Object,
+//    то в реализации Map элемент является совокупностью пары "ключ-значение".
 public class HashMp {
     public static void main(String[] args) {
         // Create a HashMap object called capitalCities
@@ -22,4 +25,7 @@ public class HashMp {
         System.out.println(capitalCities);
 
     }
+//    HashMap	порядок элементов рассчитывается по hash ключу;
+//    TreeMap	элементы хранятся в отсортированном порядке;
+//    LinkedHashMap	элементы хранятся в порядке вставки.
 }

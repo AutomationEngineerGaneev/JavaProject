@@ -5,8 +5,8 @@
 * Constructors 
 * GetterSetter(Incapsulation) 
 * Abstraction
-* Inheritance
+* inheritance1.Inheritance
 * Polymorphism
-* Interface
+* interface1.Interface
 * Collections
 * Exceptions 

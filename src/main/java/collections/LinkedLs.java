@@ -21,7 +21,9 @@ public class LinkedLs {
         // Use addLast() to add the item to the end
         cars.addLast(5);
         System.out.println(cars);
-
+//        Однонаправленная очередь работает по принципу FIFO (first-in-first-out),
+//        согласно которому новые элементы размещаются в хвосте очереди,
+//        а операции извлечения получают элементы из головы очереди.
 
     }
 }

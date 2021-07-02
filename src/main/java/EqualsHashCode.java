@@ -21,7 +21,7 @@ public class EqualsHashCode {
 
         EqualsHashCode object3 = new EqualsHashCode(5, 10);
         EqualsHashCode object4 = object3;// Переменная object4 ссылается на тот-же объект что и переменная object3
-        System.out.println(object3.equals(object4));//true
+        System.out.println(object3.equals(object4));// будет true
     }
 
 //    public static void main(String[] args) {

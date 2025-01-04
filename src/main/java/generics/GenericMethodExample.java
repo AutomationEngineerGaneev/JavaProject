@@ -1,0 +1,43 @@
+package generics;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Создали шаблонизированную фунцию
+ * То есть, класс у нас обычный
+ * А функция содержит параметр T - который указывает тип
+ *
+ */
+public class GenericMethodExample
+{
+    //функция получает список значений некоторого типа
+    //и затем возвращает одно значение этого типа
+    //взяв первый элемент из этого списка переданного ей в качестве пара-
+    //-метра
+    public static <T> T getTheFirst(List<T> list)
+    {
+        return list.get(0);
+    }
+
+    public static void main(String[] args)
+    {
+        //создали список из Integer
+        List<Integer> listOfInteger = new ArrayList<Integer>();
+        //добавили в него какие-то элементы списка
+        listOfInteger.add(0);
+        //получили первый элемент
+        //функция вернула нам значение Integer
+        Integer intValue = getTheFirst(listOfInteger);
+        System.out.println(intValue);
+
+        //теперь когда мы создаем список из строк
+        List<String> listOfString = new ArrayList<String>();
+        //добавляем какие-то элементы в список чтобы он не был пустым
+        listOfString.add("Java is the best!");
+        //теперь видно что функция вернула значение с типом String
+        String stringValue = getTheFirst(listOfString);
+        System.out.println(stringValue);
+
+    }
+}

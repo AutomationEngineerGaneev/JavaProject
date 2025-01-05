@@ -10,24 +10,43 @@ public class ArrayLs {
         cars.add("BMW");
         cars.add("Ford");
         cars.add("Mazda");
-        cars.add("Mazda");
 
-        System.out.println(cars);
-        System.out.println(cars.size());
-        System.out.println(cars.get(0));
+        System.out.println("1." + cars);
+        System.out.println("2." + cars.size());
+        System.out.println("3." + cars.get(0));
 
         cars.set(0, "Opel");
-        System.out.println(cars);
-
-        cars.remove(0);
-        System.out.println(cars);
+        System.out.println("4." + cars);
 
         Collections.sort(cars);  // Sort cars
+//        Collections класс, включающий sort()метод сортировки списков по алфавиту или по номерам:
         for (String i : cars) {
-            System.out.println(i);
+            System.out.println("5." + i);
         }
+
+        cars.remove(0);
+        System.out.println("6." + cars);
+
         cars.clear();
-        System.out.println(cars);
+        System.out.println("7." + cars);
+
+        ArrayList<String> cars2 = new ArrayList<>();
+        cars2.add("Volvo");
+        cars2.add("BMW");
+        cars2.add("Ford");
+
+// Insert element at the beginning of the list (0)
+        cars2.add(0, "Mazda");
+        System.out.println("8." + cars2);
+
+        ArrayList<String> cars3 = new ArrayList<String>();
+        cars3.add("Volvo");
+        cars3.add("BMW");
+        cars3.add("Ford");
+        cars3.add("Mazda");
+        for (int i = 0; i < cars3.size(); i++) {
+            System.out.println("9." + cars3.get(i));
+        }
     }
 //    Отличие двух коллекций ArrayList и LinkedList связано со способом хранения данных.
 //    Реализация ArrayList хранит элементы в виде массива, а LinkedList - в виде списка (двунаправленного).

@@ -17,6 +17,5 @@ public class HashSt {
         System.out.println(cars);
         cars.clear();
         System.out.println(cars);
-
     }
 }

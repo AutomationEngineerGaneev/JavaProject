@@ -20,16 +20,26 @@ public class GenericMethodExample
         return list.get(0);
     }
 
+    public static <T> T getTheSecond(List<T> list)
+    {
+        return list.get(1);
+    }
+
     public static void main(String[] args)
     {
         //создали список из Integer
         List<Integer> listOfInteger = new ArrayList<Integer>();
         //добавили в него какие-то элементы списка
         listOfInteger.add(0);
+        listOfInteger.add(1);
+        listOfInteger.add(2);
         //получили первый элемент
         //функция вернула нам значение Integer
         Integer intValue = getTheFirst(listOfInteger);
         System.out.println(intValue);
+
+        Integer intSecondValue = getTheSecond(listOfInteger);
+        System.out.println(intSecondValue);
 
         //теперь когда мы создаем список из строк
         List<String> listOfString = new ArrayList<String>();

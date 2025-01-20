@@ -3,16 +3,19 @@ package generics;
 public class MaximumTest {
 
     // determines the largest of three Comparable objects
+//    определяет самый большой из трех объектов Comparable
 
     public static <T extends Comparable<T>> T maximum(T x, T y, T z) {
         T max = x;   // assume x is initially the largest
+//        предположим, что x изначально является самым большим
 
         if(y.compareTo(max) > 0) {
             max = y;   // y is the largest so far
+//            // y на данный момент самый большой
         }
 
         if(z.compareTo(max) > 0) {
-            max = z;   // z is the largest now
+            max = z;   // z is the largest now // z сейчас самый большой
         }
         return max;   // returns the largest object
     }

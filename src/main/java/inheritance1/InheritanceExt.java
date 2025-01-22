@@ -13,6 +13,4 @@ public class InheritanceExt extends Inheritance {
         // Display the value of the brand attribute (from the Vehicle class) and the value of the modelName from the Car class
         System.out.println(myCar.brand + " " + myCar.modelName);
     }
-
-
 }

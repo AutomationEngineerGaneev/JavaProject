@@ -1,4 +1,4 @@
-package apiMethods;
+package api_methods;
 
 import java.io.IOException;
 import java.net.URI;

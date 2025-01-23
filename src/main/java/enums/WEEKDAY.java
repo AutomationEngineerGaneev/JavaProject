@@ -13,7 +13,7 @@ public enum WEEKDAY {
     SUNDAY("Day 7");
 
     private final String description;
-    // private construtor to set default value
+    // private constructor to set default value
     private WEEKDAY(String description) {
         this.description = description;
     }

@@ -33,13 +33,23 @@ public class GenericMethodExample
         listOfInteger.add(0);
         listOfInteger.add(1);
         listOfInteger.add(2);
+
+//        Используем различные методы со списком
+        String listFirst = listOfInteger.toString();
+        int listSecond = listOfInteger.size();
+        String listThird = listOfInteger.toString().replaceAll("1","4");
+
+        System.out.println("1." + listFirst);
+        System.out.println("2." + listSecond);
+        System.out.println("3." + listThird);
+
         //получили первый элемент
         //функция вернула нам значение Integer
         Integer intValue = getTheFirst(listOfInteger);
-        System.out.println(intValue);
+        System.out.println("4." +intValue);
 
         Integer intSecondValue = getTheSecond(listOfInteger);
-        System.out.println(intSecondValue);
+        System.out.println("5." +intSecondValue);
 
         //теперь когда мы создаем список из строк
         List<String> listOfString = new ArrayList<String>();
@@ -47,7 +57,7 @@ public class GenericMethodExample
         listOfString.add("Java is the best!");
         //теперь видно что функция вернула значение с типом String
         String stringValue = getTheFirst(listOfString);
-        System.out.println(stringValue);
+        System.out.println("6." +stringValue);
 
     }
 }

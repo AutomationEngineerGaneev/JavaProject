@@ -15,7 +15,7 @@ import java.io.IOException;
 public class APIWorkExample {
 
 
-//    Сериализация в JSON
+    //    Сериализация в JSON
     public String objectBook() throws JsonProcessingException {
         Book book = new Book();
         book.title = "Обитаемый остров";
@@ -32,18 +32,17 @@ public class APIWorkExample {
         Cat cat = new Cat("Barsik", "Black");
         objectMapper.writeValue(new File("cat.json"), cat);
         String jsonCat = objectMapper.writeValueAsString(cat);
-//        String jsonCat = objectMapper.writeValueAsBytes(cat);
         return jsonCat;
     }
 
-//    Десериализация из JSON
+    //    Десериализация из JSON
     public Book objectReadBook() throws JsonProcessingException {
         String jsonString = "{\"title\":\"Обитаемый остров\",\"author\":\"Стругацкий А., Стругацкий Б.\",\"pages\":413}";
         Book book = new ObjectMapper().readValue(jsonString, Book.class);
         return book;
     }
 
-//    JSON в Jackson JsonNode
+    //    JSON в Jackson JsonNode
 //    Также JSON может быть преобразован в объект JsonNode и использован для извлечения данных из определенного узла:
     public String objectReadTreeCat() throws JsonProcessingException {
         ObjectMapper objectMapper = new ObjectMapper();
@@ -59,6 +58,12 @@ public class APIWorkExample {
         System.out.println("2." + APIWorkExample.objectCat());
         System.out.println("3." + APIWorkExample.objectReadBook());
         System.out.println("4." + APIWorkExample.objectReadTreeCat());
+
+        //1.{"title":"Обитаемый остров","author":"Стругацкий А., Стругацкий Б.","pages":413}
+        //2.{"name":"Barsik","color":"Black"}
+        //3.Book{title='Обитаемый остров', author='Стругацкий А., Стругацкий Б.', pages=413}
+        //4.Black
+
 
     }
 }

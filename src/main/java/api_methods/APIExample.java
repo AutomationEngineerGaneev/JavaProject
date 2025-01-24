@@ -6,7 +6,8 @@ import java.net.URISyntaxException;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-
+import org.json.*;
+import io.qameta.allure.Step;
 
 //Парсинг — это процесс автоматического сбора и структурирования данных.
 public class APIExample {
@@ -14,6 +15,8 @@ public class APIExample {
     private static final String JSON = "application/json";
     private static final String COOKIE = "Cookie";
 
+    //Вот пример получения данных без JSON.
+    @Step("GET: http://numbersapi.com/17/trivia")
     public String sendRequestGetIsTestService() throws URISyntaxException, IOException, InterruptedException {
         String fullURL = "http://numbersapi.com/17/trivia";
         HttpRequest request =
@@ -27,6 +30,25 @@ public class APIExample {
         return response.body();
     }
 
+    //И второй пример кода обработки JSON.
+    @Step("GET: http://jservice.io/api/random?count=")
+    public String sendRequestGetIsTestServiceWithJson() throws URISyntaxException, IOException, InterruptedException {
+        int n = 5;
+        HttpRequest request = HttpRequest.newBuilder().uri(new URI("http://jservice.io/api/random?count=" + n)).GET().build();
+        HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
+        String jsonString = response.body().toString();
+        System.out.println(jsonString);
+        JSONArray array = new JSONArray(jsonString);
+        for (int i = 0; i < n; i++){
+            JSONObject obj = array.getJSONObject(i);
+            String answer = (String) obj.get("answer");
+            String question = (String) obj.get("question");
+            System.out.println(question + " - " + answer);
+        }
+        return response.body();
+    }
+
+    @Step("POST: http://numbersapi.com/17/trivia")
     public void sendRequestService() throws URISyntaxException, IOException, InterruptedException {
         String fullURL = "http://numbersapi.com/17/trivia";
         HttpRequest request = HttpRequest.newBuilder()
@@ -41,6 +63,7 @@ public class APIExample {
         responsePost.body();
     }
 
+    @Step("POST: http://www.example.com/page.php")
     public String sendRequestService1() throws IOException, InterruptedException {
 
         HttpClient client = HttpClient.newHttpClient();
@@ -53,6 +76,7 @@ public class APIExample {
         return responsePost.body();
     }
 
+    @Step("POST: http://example.com/api")
     public String sendRequestService2() throws IOException, InterruptedException {
 
         HttpClient client = HttpClient.newHttpClient();
@@ -72,10 +96,6 @@ public class APIExample {
         APIExample apiExample = new APIExample();
 
         String apiExampleSend = apiExample.sendRequestGetIsTestService();
-        String apiExampleSend1 = apiExample.sendRequestService1();
-        String apiExampleSend2 = apiExample.sendRequestService2();
         System.out.println("1." + " " + apiExampleSend);
-        System.out.println("2." + " " + apiExampleSend1);
-        System.out.println("3." + " " + apiExampleSend2);
     }
 }

@@ -17,6 +17,10 @@ dependencies {
     implementation group: 'io.qameta.allure', name: 'allure-testng', version: '2.29.1'
     compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.36'
 //    testImplementation group: 'org.testng', name: 'testng', version: '7.10.2'
+    testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '5.5.0'
+    testImplementation group: 'junit', name: 'junit', version: '4.13.2'
+
+
 
 }
 

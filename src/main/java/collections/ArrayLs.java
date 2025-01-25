@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class ArrayLs {
-    public static void main(String[] args) {
+
+    public void arraysExample() {
         ArrayList<String> cars = new ArrayList<>();
         cars.add("Volvo");
         cars.add("BMW");
@@ -54,4 +55,32 @@ public class ArrayLs {
 //    копируются в массив, а копировать из массива ArrayList в массив для сортировки быстрее.
 //    При большом количестве операций добавления и удаления элементов в коллекцию LinkedList должен быть более приемлемым,
 //    т.к. при этих операциях не приходится перемещать части массива
+
+
+    public void arraysExamplePlays() {
+        //creating ArrayList of string type
+        ArrayList<String> arrList = new ArrayList<>();
+
+        //adding few elements
+        arrList.add("Cricket"); //list: ["Cricket"]
+        arrList.add("Hockey"); //list: ["Cricket", "Hockey"]
+
+        //inserting element at first position, index 0
+        //represents first element because ArrayList is based
+        //on zero based indexing system
+        arrList.add(0, "BasketBall"); //list: ["BasketBall", "Cricket", "Hockey"]
+        System.out.println("Elements: " + arrList);
+
+        System.out.println("ArrayList Elements: ");
+        //Traversing ArrayList using enhanced for loop
+        for (String str : arrList)
+            System.out.println(str);
+//      arrList.forEach(System.out::println);
+    }
+
+    public static void main(String[] args) {
+        ArrayLs arrayLs = new ArrayLs();
+        arrayLs.arraysExample();
+        arrayLs.arraysExamplePlays();
+    }
 }

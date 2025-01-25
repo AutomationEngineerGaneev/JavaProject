@@ -14,7 +14,6 @@ import java.io.IOException;
 // Благодаря наследованию работа со всеми форматами будет происходить единообразно, через единый интерфейс.
 public class JsonAPIExample {
 
-
     //    Сериализация в JSON
     public String objectBook() throws JsonProcessingException {
         Book book = new Book();
@@ -53,17 +52,15 @@ public class JsonAPIExample {
     }
 
     public static void main(String[] args) throws IOException {
-        JsonAPIExample JsonAPIExample = new JsonAPIExample();
-        System.out.println("1." + JsonAPIExample.objectBook());
-        System.out.println("2." + JsonAPIExample.objectCat());
-        System.out.println("3." + JsonAPIExample.objectReadBook());
-        System.out.println("4." + JsonAPIExample.objectReadTreeCat());
+        JsonAPIExample jsonAPIExample = new JsonAPIExample();
+        System.out.println("1." + jsonAPIExample.objectBook());
+        System.out.println("2." + jsonAPIExample.objectCat());
+        System.out.println("3." + jsonAPIExample.objectReadBook());
+        System.out.println("4." + jsonAPIExample.objectReadTreeCat());
 
         //1.{"title":"Обитаемый остров","author":"Стругацкий А., Стругацкий Б.","pages":413}
         //2.{"name":"Barsik","color":"Black"}
         //3.Book{title='Обитаемый остров', author='Стругацкий А., Стругацкий Б.', pages=413}
         //4.Black
-
-
     }
 }

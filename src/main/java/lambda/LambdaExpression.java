@@ -32,6 +32,12 @@ public class LambdaExpression {
         return result;
     }
 
+//    В Java 8 все типы, к которым могут быть присвоены лямбда-выражения, — это интерфейсы.
+//    И само лямбда-выражение, то есть этот «блок кода», должно быть реализацией интерфейса.
+//    Это один из ключевых моментов для понимания лямбда-выражений.
+//    Проще говоря, лямбда-выражение является реализацией интерфейса.
+
+//    Интерфейс, у которого есть только одна функция для реализации, называется «функциональным интерфейсом».
 
     //    Отфильтровали четные числа
     public List<Integer> lambdaMethodWithList() {
@@ -91,9 +97,6 @@ public class LambdaExpression {
 //        System.out.println("Result: " + result);
         return result;
     }
-
-
-
 
     public static void main(String[] args) throws URISyntaxException, IOException, InterruptedException {
         LambdaExpression lambdaExpression = new LambdaExpression();

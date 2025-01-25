@@ -1,9 +1,6 @@
 import api_methods.base_arrays_example.User;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
-import io.restassured.response.Response;
-import io.restassured.response.ResponseBody;
-import io.restassured.specification.RequestSpecification;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;

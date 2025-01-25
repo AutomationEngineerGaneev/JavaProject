@@ -1,8 +1,6 @@
 package api_methods.base_arrays_example;
 
-import io.qameta.allure.internal.shadowed.jackson.core.JsonParseException;
 import io.qameta.allure.internal.shadowed.jackson.core.JsonProcessingException;
-import io.qameta.allure.internal.shadowed.jackson.databind.JsonMappingException;
 import io.qameta.allure.internal.shadowed.jackson.databind.ObjectMapper;
 import io.qameta.allure.internal.shadowed.jackson.databind.SerializationFeature;
 import io.qameta.allure.internal.shadowed.jackson.databind.node.ObjectNode;
@@ -108,15 +106,13 @@ public class APIArraysExample {
         return output;
     }
 
-    public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException {
+    public static void main(String[] args) throws IOException {
         APIArraysExample APIArraysExample = new APIArraysExample();
-        User user = new User();
 
         System.out.println("1. Сериализация объекта в JSON:" + " " + APIArraysExample.objectLang());
         System.out.println("2. Десериализация JSON в список:" + " " + APIArraysExample.objectLangList());
         System.out.println("3." + APIArraysExample.objectLangListIterator());
         System.out.println("4." + APIArraysExample.jsonNodeString());
         System.out.println("5." + APIArraysExample.jsonUserString());
-
     }
 }

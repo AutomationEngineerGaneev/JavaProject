@@ -12,7 +12,7 @@ import java.io.IOException;
 // Основной функционал для работы с форматом JSON — класс ObjectMapper.
 // А работать с другими форматами помогут его наследники (XmlMapper, YAMLMapper).
 // Благодаря наследованию работа со всеми форматами будет происходить единообразно, через единый интерфейс.
-public class APIWorkExample {
+public class JsonAPIExample {
 
 
     //    Сериализация в JSON
@@ -53,11 +53,11 @@ public class APIWorkExample {
     }
 
     public static void main(String[] args) throws IOException {
-        APIWorkExample APIWorkExample = new APIWorkExample();
-        System.out.println("1." + APIWorkExample.objectBook());
-        System.out.println("2." + APIWorkExample.objectCat());
-        System.out.println("3." + APIWorkExample.objectReadBook());
-        System.out.println("4." + APIWorkExample.objectReadTreeCat());
+        JsonAPIExample JsonAPIExample = new JsonAPIExample();
+        System.out.println("1." + JsonAPIExample.objectBook());
+        System.out.println("2." + JsonAPIExample.objectCat());
+        System.out.println("3." + JsonAPIExample.objectReadBook());
+        System.out.println("4." + JsonAPIExample.objectReadTreeCat());
 
         //1.{"title":"Обитаемый остров","author":"Стругацкий А., Стругацкий Б.","pages":413}
         //2.{"name":"Barsik","color":"Black"}

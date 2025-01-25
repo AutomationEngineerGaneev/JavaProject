@@ -14,8 +14,8 @@ import java.util.List;
 
 public class APIArraysExample {
 
-    //    Давайте продемонстрируем, как преобразовать объект List в JSON
-//    с помощью метода ObjectMapper.writeValueAsString() .
+    //Давайте продемонстрируем, как преобразовать объект List в JSON
+    //с помощью метода ObjectMapper.writeValueAsString().
     public String objectLang() throws JsonProcessingException {
         // Create ObjectMapper object.
         ObjectMapper mapper = new ObjectMapper();
@@ -55,7 +55,7 @@ public class APIArraysExample {
     }
 
     @SuppressWarnings("unchecked")
-    public String objectLangListIterator() throws JsonParseException, JsonMappingException, IOException {
+    public String objectLangListIterator() throws IOException {
         // Create ObjectMapper object.
         ObjectMapper mapper = new ObjectMapper();
         mapper.enable(SerializationFeature.INDENT_OUTPUT);
@@ -74,11 +74,10 @@ public class APIArraysExample {
         return language;
     }
 
-
     //Чтобы создать JSON в Java с минимальными усилиями, вы можете
     // использовать ObjectMapper и ObjectNode из библиотеки Jackson.
     // Эти классы предоставляют удобный механизм цепочечного вызова методов для построения JSON:
-    public String jsonString() throws IOException {
+    public String jsonNodeString() throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         ObjectNode json = mapper.createObjectNode()
                 .put("name", "Джон Доу")
@@ -92,9 +91,8 @@ public class APIArraysExample {
         return jsonString;
     }
 
-    public String jsonString1() throws IOException {
+    public String jsonUserString() throws IOException {
         ObjectMapper mapper = new ObjectMapper();
-
         ObjectNode json = mapper.createObjectNode();
         json.put("user", "coder123")
                 .putObject("preferences")
@@ -110,8 +108,6 @@ public class APIArraysExample {
         return output;
     }
 
-
-
     public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException {
         APIArraysExample APIArraysExample = new APIArraysExample();
         User user = new User();
@@ -119,8 +115,8 @@ public class APIArraysExample {
         System.out.println("1. Сериализация объекта в JSON:" + " " + APIArraysExample.objectLang());
         System.out.println("2. Десериализация JSON в список:" + " " + APIArraysExample.objectLangList());
         System.out.println("3." + APIArraysExample.objectLangListIterator());
-        System.out.println("4." + APIArraysExample.jsonString());
-        System.out.println("5." + APIArraysExample.jsonString1());
+        System.out.println("4." + APIArraysExample.jsonNodeString());
+        System.out.println("5." + APIArraysExample.jsonUserString());
 
     }
 }

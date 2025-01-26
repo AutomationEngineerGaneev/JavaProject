@@ -3,7 +3,7 @@ package collections;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class ArrayLs {
+public class ArrayListExample {
 
     public void arraysExample() {
         ArrayList<String> cars = new ArrayList<>();
@@ -79,8 +79,8 @@ public class ArrayLs {
     }
 
     public static void main(String[] args) {
-        ArrayLs arrayLs = new ArrayLs();
-        arrayLs.arraysExample();
-        arrayLs.arraysExamplePlays();
+        ArrayListExample arrayListExample = new ArrayListExample();
+        arrayListExample.arraysExample();
+        arrayListExample.arraysExamplePlays();
     }
 }

@@ -2,7 +2,7 @@ package collections;
 
 import java.util.HashSet;
 
-public class HashSt {
+public class HashSetExample {
     public static void main(String[] args) {
         HashSet<String> cars = new HashSet<>();
         cars.add("Volvo");

@@ -2,7 +2,7 @@ package collections;
 
 import java.util.LinkedList;
 
-public class LinkedLs {
+public class LinkedListExample {
     public static void main(String[] args) {
         LinkedList<Integer> cars = new LinkedList<>();
         cars.add(1);

@@ -1,6 +1,5 @@
 package lambda;
 
-
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.Arrays;
@@ -10,6 +9,26 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class LambdaExpression {
+
+//        Если метод не принимает никаких параметров, то пишутся пустые скобки, например:
+//        ()-> 30 + 20;
+//
+//
+//        Если метод принимает только один параметр, то скобки можно опустить:
+//        n-> n * n;
+
+    public int lambdaOperationPattern() {
+        Operationable operation;
+
+//        Параметры лямбда-выражения должны соответствовать по типу параметрам метода из функционального интерфейса.
+//        При написании самого лямбда-выражения тип параметров писать необязательно,
+//        хотя в принципе это можно сделать, например:
+            operation = (int x, int y)->x+y;
+//            operation = (x,y)->x+y;
+        int result = operation.calculate(10, 20);
+        return result;
+    }
+
 
     // Они представляют собой сокращенный синтаксис для представления объектов,
     // реализующих функциональные интерфейсы, и позволяют писать более компактный и выразительный код.
@@ -28,7 +47,8 @@ public class LambdaExpression {
 
     public int lambdaMethod() {
         MyFunction square = x -> x * x;
-        int result = square.apply(4);// Результат: 16
+        int result = square.apply(4);
+        // Результат: 16
         return result;
     }
 
@@ -49,7 +69,7 @@ public class LambdaExpression {
     }
 
 
-//    Метод Stream filter() для фильтрации Map по ключам и значениям.
+    //    Метод Stream filter() для фильтрации Map по ключам и значениям.
     public Map<Integer, String> lambdaMethodWithMapByKeys() {
         Map<Integer, String> hmap = new HashMap<Integer, String>();
         hmap.put(11, "Apple");
@@ -57,8 +77,8 @@ public class LambdaExpression {
         hmap.put(33, "Kiwi");
         hmap.put(44, "Banana");
 
-        Map<Integer,String> result = hmap.entrySet().stream()
-                .filter(map -> map.getKey().intValue() <=22)
+        Map<Integer, String> result = hmap.entrySet().stream()
+                .filter(map -> map.getKey().intValue() <= 22)
                 .collect(Collectors.toMap(map -> map.getKey(), map -> map.getValue()));
 
 //        System.out.println("Result: " + result);
@@ -81,7 +101,7 @@ public class LambdaExpression {
         return result;
     }
 
-    public Map<Integer, String> lambdaMethodWithMapByBothKeyAndValue () {
+    public Map<Integer, String> lambdaMethodWithMapByBothKeyAndValue() {
         Map<Integer, String> hmap = new HashMap<Integer, String>();
         hmap.put(1, "ABC");
         hmap.put(2, "XCB");
@@ -106,5 +126,6 @@ public class LambdaExpression {
         System.out.println("3." + " " + lambdaExpression.lambdaMethodWithMapByKeys());
         System.out.println("4." + " " + lambdaExpression.lambdaMethodWithMapByValues());
         System.out.println("5." + " " + lambdaExpression.lambdaMethodWithMapByBothKeyAndValue());
+        System.out.println("6." + " " + lambdaExpression.lambdaOperationPattern());
     }
 }

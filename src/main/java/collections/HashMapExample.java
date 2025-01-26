@@ -5,7 +5,7 @@ import java.util.HashMap;
 //    интерфейс Map не относят к коллекции.
 //    в коллекции элемент данных представляет определенный Object,
 //    то в реализации Map элемент является совокупностью пары "ключ-значение".
-public class HashMp {
+public class HashMapExample {
     public static void main(String[] args) {
         // Create a HashMap object called capitalCities
         HashMap<String, Integer> capitalCities = new HashMap<>();

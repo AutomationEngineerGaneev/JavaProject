@@ -63,7 +63,7 @@ public class APIArraysExample {
         List<String> progLang2 = new ArrayList<>();
         progLang2 = mapper.readValue(json, List.class);
 
-        //Десериализация JSON в список(с учетом итератора
+        //Десериализация JSON в список(с учетом итератора)
         String language = null;
         for (Iterator<String> iterator = progLang2.iterator(); iterator.hasNext(); ) {
             language = (String) iterator.next();

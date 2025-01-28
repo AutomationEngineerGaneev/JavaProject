@@ -7,7 +7,6 @@ import io.qameta.allure.internal.shadowed.jackson.databind.ObjectMapper;
 import java.io.File;
 import java.io.IOException;
 
-
 //Jackson — это популярная библиотека для сериализации/десериализации Java-объектов в различные текстовые форматы.
 // Основной функционал для работы с форматом JSON — класс ObjectMapper.
 // А работать с другими форматами помогут его наследники (XmlMapper, YAMLMapper).
@@ -51,12 +50,25 @@ public class JsonAPIExample {
         return color;
     }
 
+    public String objectReadTreeCatByFile() throws IOException {
+        ObjectMapper objectMapper = new ObjectMapper();
+        JsonNode jsonNode = objectMapper.readTree(new File("cat.json"));
+        String color = jsonNode.get("color").asText();
+        String name = jsonNode.get("name").asText();
+
+        System.out.println("5. By File display jsonNode:" + " " + jsonNode);
+        System.out.println("5. By File display name:" + " " + name);
+
+        return color;
+    }
+
     public static void main(String[] args) throws IOException {
         JsonAPIExample jsonAPIExample = new JsonAPIExample();
-        System.out.println("1." + jsonAPIExample.objectBook());
-        System.out.println("2." + jsonAPIExample.objectCat());
-        System.out.println("3." + jsonAPIExample.objectReadBook());
-        System.out.println("4." + jsonAPIExample.objectReadTreeCat());
+        System.out.println("1." + " " + jsonAPIExample.objectBook());
+        System.out.println("2." + " " + jsonAPIExample.objectCat());
+        System.out.println("3." + " " + jsonAPIExample.objectReadBook());
+        System.out.println("4." + " " + jsonAPIExample.objectReadTreeCat());
+        System.out.println("5. By File display color:" + " " + jsonAPIExample.objectReadTreeCatByFile());
 
         //1.{"title":"Обитаемый остров","author":"Стругацкий А., Стругацкий Б.","pages":413}
         //2.{"name":"Barsik","color":"Black"}

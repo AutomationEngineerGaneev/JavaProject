@@ -56,8 +56,8 @@ public class JsonAPIExample {
         String color = jsonNode.get("color").asText();
         String name = jsonNode.get("name").asText();
 
-        System.out.println("5. By File display jsonNode:" + " " + jsonNode);
-        System.out.println("5. By File display name:" + " " + name);
+        System.out.println("5. Display jsonNode by File:" + " " + jsonNode);
+        System.out.println("5. Display name by File:" + " " + name);
 
         return color;
     }
@@ -68,7 +68,7 @@ public class JsonAPIExample {
         System.out.println("2." + " " + jsonAPIExample.objectCat());
         System.out.println("3." + " " + jsonAPIExample.objectReadBook());
         System.out.println("4." + " " + jsonAPIExample.objectReadTreeCat());
-        System.out.println("5. By File display color:" + " " + jsonAPIExample.objectReadTreeCatByFile());
+        System.out.println("5. Display color by File:" + " " + jsonAPIExample.objectReadTreeCatByFile());
 
         //1.{"title":"Обитаемый остров","author":"Стругацкий А., Стругацкий Б.","pages":413}
         //2.{"name":"Barsik","color":"Black"}

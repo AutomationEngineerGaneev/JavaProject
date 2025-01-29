@@ -6,7 +6,11 @@ package generics.robot;
 
 // Начинается параметризация
 // T - Type
-public class Robot <T> {
+//public class Robot <T> {
+
+// Мы можем сейчас использовать только те классы, которые наследуются от Head
+
+public class Robot <T extends Head> {
 
 //    Чтобы не создавать трёх разных роботов с разными головами мы будем использовать дженерики
 
@@ -16,6 +20,17 @@ public class Robot <T> {
 
     private Body body;
     private T head;
+//    private Object head;
+
+//    public void foo() {
+//        с переменной данного типа мы не можем работать
+// методы класса object.
+//        head.
+//    }
+
+    public void foo() {
+
+    }
 
     public Robot(Body body, T head) {
         this.body = body;

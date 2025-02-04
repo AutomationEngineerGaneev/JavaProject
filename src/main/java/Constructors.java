@@ -16,6 +16,4 @@ public class Constructors {
         Constructors myCar = new Constructors(1969, "Mustang");
         System.out.println(myCar.modelYear + " " + myCar.modelName);
     }
-
-
 }

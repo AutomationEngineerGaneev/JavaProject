@@ -43,6 +43,7 @@ public class Main {
 //        Выделяется красным цветом после ввода public class Robot <T extends Head> {
 //        Robot robot4 = new Robot(body, leg);
 
+//        Выполняется в этом случае: public class Robot <T extends Head> {
 //        3. Мы можем сейчас использовать только те классы, которые наследуются от Head
 //        Robot robot4 = new Robot(body, mediumHead);
 //        robot.getHead().burn();

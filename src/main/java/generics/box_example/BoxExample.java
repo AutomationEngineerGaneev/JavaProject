@@ -20,4 +20,8 @@ class BoxExample<T> { // обозначение типа - T
     public T getItem() { // возвращает объект типа T
         return item;
     }
+
+    public void foo() {
+        System.out.println("Бумага");
+    }
 }

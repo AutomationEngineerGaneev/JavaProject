@@ -36,8 +36,6 @@ public class Main {
 //        Robot<SmallHead> robot = new Robot<SmallHead>(body, smallHead);
 //        Robot<BigHead> robot2  = new Robot<>(body, bigHead);
 
-
-
 //        2. Когда у нас стоит здесь чистая параметризация, мы сюда можем положить все что угодно
 //        И чтобы как-то ограничить вот этот набор, принимаемых объектов, используется ключевое слово extends
 //        Выделяется красным цветом после ввода public class Robot <T extends Head> {
@@ -61,7 +59,11 @@ public class Main {
 //        robot5.<SmallHead, SmallHead>foo(smallHead,smallHead);
 
 //        6.
-//        Robot<SmallHead> robot = new Robot(body, smallHead);
+        Robot<SmallHead> robot = new Robot(body, smallHead);
+        Robot<MediumHead> robot1  = new Robot<> (body, mediumHead);
+
+        robot.foo(robot1);
+
 
 
 //        Сырой Тип
@@ -74,8 +76,6 @@ public class Main {
 //         robot3 = robot2;
 
 //        присваивание ссылок
-
-
     }
 
 }

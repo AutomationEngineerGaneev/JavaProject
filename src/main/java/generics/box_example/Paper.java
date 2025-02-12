@@ -5,10 +5,6 @@ import generics.robot.Robot;
 public class Paper {
 
 
-
-
-
-
     public static void main(String[] args) {
 
         Paper paper = new Paper();

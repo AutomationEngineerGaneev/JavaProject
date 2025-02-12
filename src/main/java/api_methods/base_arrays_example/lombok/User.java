@@ -1,4 +1,4 @@
-package api_methods.base_arrays_example;
+package api_methods.base_arrays_example.lombok;
 
 import io.qameta.allure.internal.shadowed.jackson.annotation.JsonInclude;
 import io.qameta.allure.internal.shadowed.jackson.databind.ObjectMapper;

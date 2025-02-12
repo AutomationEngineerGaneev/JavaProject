@@ -89,6 +89,9 @@ public class APIArraysExample {
         return jsonString;
     }
 
+
+//    Jackson предлагает JsonNode и ObjectNode для гибкой работы с JSON.
+//    Эти классы позволяют изменять содержимое JSON на лету:
     public String jsonUserString() throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         ObjectNode json = mapper.createObjectNode();

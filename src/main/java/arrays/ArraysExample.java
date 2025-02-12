@@ -1,6 +1,5 @@
 package arrays;
 
-
 public class ArraysExample {
 
     public void arraysExampleFirst() {

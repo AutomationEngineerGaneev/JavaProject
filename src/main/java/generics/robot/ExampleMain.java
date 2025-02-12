@@ -1,6 +1,6 @@
 package generics.robot;
 
-public class Main {
+public class ExampleMain {
 
 //    public static void main(String[] args) {
 //

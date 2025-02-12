@@ -1,4 +1,4 @@
-import api_methods.base_arrays_example.User;
+import api_methods.base_arrays_example.lombok.User;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import org.junit.jupiter.api.Test;

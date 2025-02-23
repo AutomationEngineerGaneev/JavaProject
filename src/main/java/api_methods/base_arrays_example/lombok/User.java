@@ -53,6 +53,20 @@ public class User {
         return String.valueOf(json);
     }
 
+
+    public void jsonObjectSecond()  {
+
+//        JsonBuilder jsonBuilder = new JsonBuilder();
+
+//                .addObject("user", new JsonBuilder()
+//                        .add("id", 1)
+//                        .add("name", "stackOverflower"));
+
+
+    }
+
+
+
     public static void main(String[] args) throws IOException {
         User user = new User();
         System.out.println("1." + user.jsonUser());

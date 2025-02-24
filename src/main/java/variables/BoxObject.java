@@ -29,7 +29,7 @@ public class BoxObject {
 //        cannot be converted to String
 //        String o = box.get(); ^
 
-
+//Тест 3 - успешная компиляция
         BoxObject boxObject1 = new BoxObject("Hello!");
         String o1 = (String) boxObject1.get();
         int len1 = o1.length();

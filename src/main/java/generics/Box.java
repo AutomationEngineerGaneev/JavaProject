@@ -5,6 +5,8 @@ package generics;
  * Функция содержит параметр T - который указывает тип
  *
  */
+
+// Box<T> Обобщенный тип (generic)
 public class Box<T> {
 
 
@@ -24,6 +26,8 @@ public class Box<T> {
     }
 
     public static void main(String[] args) {
+
+//        Box<Integer> это Параметризованный тип (parametrized)
         Box<Integer> integerBox = new Box<Integer>();
         Box<String> stringBox = new Box<String>();
 

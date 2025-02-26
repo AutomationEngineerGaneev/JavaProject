@@ -1,4 +1,4 @@
-package interface1;
+package interface_base;
 
 public interface Interface {
     //    По умолчанию все поля, описанные в интерфейсе

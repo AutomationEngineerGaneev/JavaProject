@@ -1,4 +1,4 @@
-package interface1;
+package interface_base;
 
 public class InterfaceImpl implements Interface {
     public void animalSound() {

@@ -121,11 +121,11 @@ public class LambdaExpression {
     public static void main(String[] args) throws URISyntaxException, IOException, InterruptedException {
         LambdaExpression lambdaExpression = new LambdaExpression();
 
+        System.out.println("0." + " " + lambdaExpression.lambdaOperationPattern());
         System.out.println("1." + " " + lambdaExpression.lambdaMethod());
         System.out.println("2." + " " + lambdaExpression.lambdaMethodWithList());
         System.out.println("3." + " " + lambdaExpression.lambdaMethodWithMapByKeys());
         System.out.println("4." + " " + lambdaExpression.lambdaMethodWithMapByValues());
         System.out.println("5." + " " + lambdaExpression.lambdaMethodWithMapByBothKeyAndValue());
-        System.out.println("6." + " " + lambdaExpression.lambdaOperationPattern());
     }
 }

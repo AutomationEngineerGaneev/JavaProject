@@ -7,6 +7,6 @@
 * Abstraction
 * inheritance1.Inheritance
 * Polymorphism
-* interface1.Interface
+* interface_base.Interface
 * Collections
 * Exceptions 

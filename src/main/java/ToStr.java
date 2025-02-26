@@ -18,6 +18,7 @@ public class ToStr {
                 ", retired=" + retired +
                 '}';
     }
+
     public static void main(String[] args) {
         ToStr toStr = new ToStr("Петров Артур Артурович", 56, false);
         System.out.println(toStr);

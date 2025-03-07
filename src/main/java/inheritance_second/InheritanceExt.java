@@ -1,4 +1,4 @@
-package inheritance1;
+package inheritance_second;
 
 public class InheritanceExt extends Inheritance {
     private String modelName = "Mustang";    // Car attribute

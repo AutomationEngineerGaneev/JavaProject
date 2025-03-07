@@ -1,4 +1,4 @@
-package inheritance1;
+package inheritance_second;
 
 public class Inheritance  {
     protected String brand = "Ford";        // Vehicle attribute

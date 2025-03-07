@@ -15,5 +15,4 @@ public class ThreadByRunnable implements Runnable {
         new_one.start(); //Запуск потока
         new_two.start(); //Запуск потока
     }
-
 }

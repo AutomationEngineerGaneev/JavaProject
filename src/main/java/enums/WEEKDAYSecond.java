@@ -4,7 +4,7 @@ public enum WEEKDAYSecond {
     MONDAY,
     TUESDAY,
     WEDNESDAY,
-    THRUSDAY,
+    THURSDAY,
     FRIDAY,
     SATURDAY,
     SUNDAY;

@@ -18,11 +18,10 @@ public class VarargsFormatMethod {
                 String.format(
                         "Site Name : %s, Emp Count: %d Type: %s",
                         siteName, empCount, type
-                )  //    Site Name : programiz.com, Emp Count: 6 Type: tutorial website
+                )
+//                  Site Name : programiz.com, Emp Count: 6 Type: tutorial website
 //                  %d - Задается целое число (int. byte, short, int, long, BigInteger)
-
-//                %s  -
-
+//                  %s  - Любой тип, который будет приведен к строке
         );
     }
 

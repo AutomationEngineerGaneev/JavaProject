@@ -10,10 +10,12 @@ import java.io.IOException;
 @SuppressWarnings("java:S2142")
 public class CommonJsonParserExample {
 
+    public String pathCounters = "src/test/java/steps_json_parse/json_File/counters.json";
+
     @Step("Получаем данные по unread")
     public int getUnreadMessagesInfo() throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
-        JsonNode jsonNode = objectMapper.readTree(new File("counters.json"));
+        JsonNode jsonNode = objectMapper.readTree(new File(pathCounters));
         Integer unreadCounter = jsonNode.get("unread").asInt();
         return unreadCounter;
     }
@@ -21,7 +23,7 @@ public class CommonJsonParserExample {
     @Step("Получаем данные по total")
     public int getUnreadTotalMessagesInfo() throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
-        JsonNode jsonNode = objectMapper.readTree(new File("counters.json"));
+        JsonNode jsonNode = objectMapper.readTree(new File(pathCounters));
         Integer unreadCounterTotal = jsonNode.get("total").asInt();
         return unreadCounterTotal;
     }
@@ -29,7 +31,7 @@ public class CommonJsonParserExample {
     @Step("Получаем данные по counter всех элементов")
     public JsonNode getUnreadMessagesInfoCounterArrays() throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
-        JsonNode jsonNode = objectMapper.readTree(new File("counters.json"));
+        JsonNode jsonNode = objectMapper.readTree(new File(pathCounters));
         JsonNode unreadCounterCounter = jsonNode.get("counter");
         return unreadCounterCounter;
     }
@@ -37,7 +39,7 @@ public class CommonJsonParserExample {
     @Step("Получаем данные по counter 1-го элемента")
     public JsonNode getUnreadMessagesInfoCounterArraysZero() throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
-        JsonNode jsonNode = objectMapper.readTree(new File("counters.json"));
+        JsonNode jsonNode = objectMapper.readTree(new File(pathCounters));
         JsonNode unreadCounterCounterZero = jsonNode.get("counter").get(0);
         return unreadCounterCounterZero;
     }
@@ -45,7 +47,7 @@ public class CommonJsonParserExample {
     @Step("Получаем данные по type")
     public JsonNode getUnreadMessagesInfoCounterArraysZeroType() throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
-        JsonNode jsonNode = objectMapper.readTree(new File("counters.json"));
+        JsonNode jsonNode = objectMapper.readTree(new File(pathCounters));
         JsonNode unreadCounterCounterZero = jsonNode.get("counter").get(0).get("type");
         return unreadCounterCounterZero;
     }

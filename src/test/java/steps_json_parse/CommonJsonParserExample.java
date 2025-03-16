@@ -32,24 +32,24 @@ public class CommonJsonParserExample {
     public JsonNode getUnreadMessagesInfoCounterArrays() throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
         JsonNode jsonNode = objectMapper.readTree(new File(pathCounters));
-        JsonNode unreadCounterCounter = jsonNode.get("counter");
-        return unreadCounterCounter;
+        JsonNode unreadAllCounters = jsonNode.get("counter");
+        return unreadAllCounters;
     }
 
     @Step("Получаем данные по counter 1-го элемента")
     public JsonNode getUnreadMessagesInfoCounterArraysZero() throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
         JsonNode jsonNode = objectMapper.readTree(new File(pathCounters));
-        JsonNode unreadCounterCounterZero = jsonNode.get("counter").get(0);
-        return unreadCounterCounterZero;
+        JsonNode unreadCounterZero = jsonNode.get("counter").get(0);
+        return unreadCounterZero;
     }
 
-    @Step("Получаем данные по type")
+    @Step("Получаем данные по type по counter 1-го элемента")
     public JsonNode getUnreadMessagesInfoCounterArraysZeroType() throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
         JsonNode jsonNode = objectMapper.readTree(new File(pathCounters));
-        JsonNode unreadCounterCounterZero = jsonNode.get("counter").get(0).get("type");
-        return unreadCounterCounterZero;
+        JsonNode unreadCounterZeroType = jsonNode.get("counter").get(0).get("type");
+        return unreadCounterZeroType;
     }
 
     public static void main(String[] args) throws IOException {

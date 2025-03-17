@@ -2,10 +2,8 @@ package final_keyword;
 
 public class Final_base {
 
-
 //    В Java final ключевое слово используется для обозначения констант.
 //    Его можно использовать с переменными, методами и классами.
-
 
 //    После того, как любая сущность (переменная, метод или класс) объявлена final, она может быть назначена только один раз. То есть,
 //
@@ -24,13 +22,5 @@ public class Final_base {
 //        // try to change the final variable
 //        AGE = 45;
 //        System.out.println("Age: " + AGE);
-
-
-
-
-
     }
-
-//
-
 }

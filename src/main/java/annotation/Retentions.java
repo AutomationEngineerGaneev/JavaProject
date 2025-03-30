@@ -5,7 +5,6 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-
 //Чтобы ограничить область применения аннотации,
 // используется аннотация @Target, которая определяет, где её можно применять:
 @Target(value= ElementType.FIELD)

@@ -45,6 +45,14 @@ public class ArraysJsonParserExample {
         return secondElModelsInfo;
     }
 
+    @Step("Получаем данные по models 2-го элемента")
+    public String getSecondElModelsInfoValueOf() throws IOException {
+        ObjectMapper objectMapper = new ObjectMapper();
+        JsonNode jsonNode = objectMapper.readTree(new File(pathCounters));
+        String secondElModelsInfo = String.valueOf(jsonNode.get("cars").get(0).get("models").get(2));
+        return secondElModelsInfo;
+    }
+
     public static void main(String[] args) throws IOException {
 
         ArraysJsonParserExample commonJsonParserExample = new ArraysJsonParserExample();
@@ -53,5 +61,6 @@ public class ArraysJsonParserExample {
         System.out.println(commonJsonParserExample.getNameInfo());
         System.out.println(commonJsonParserExample.getModelsInfo());
         System.out.println(commonJsonParserExample.getSecondElModelsInfo());
+        System.out.println(commonJsonParserExample.getSecondElModelsInfoValueOf());
     }
 }

@@ -22,11 +22,7 @@ dependencies {
     implementation group: 'com.github.holgerbrandl', name: 'jsonbuilder', version: '0.10'
 //    implementation group: 'io.qameta.allure', name: 'allure-testng', version: '2.29.1'
 //    testImplementation group: 'org.testng', name: 'testng', version: '7.11.0'
-
-
-
-
-
+    implementation("org.seleniumhq.selenium:selenium-java:4.31.0")
 }
 
 test {

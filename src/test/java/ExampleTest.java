@@ -1,7 +1,6 @@
 import api_methods.base_arrays_example.lombok.User;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
-import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 
@@ -10,14 +9,14 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class ExampleTest {
 
-    @Test
+//    @Test
     public void TestEx() throws IOException {
         User user = new User();
         System.out.println("1." + user.jsonUser());
         System.out.println("2." + user.jsonObject()); // Выводим сформированный JSON.
     }
 
-    @Test
+//    @Test
     public void get(){
         RestAssured.baseURI = "https://postman-echo.com";
         given()

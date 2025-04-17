@@ -7,6 +7,8 @@ import io.qameta.allure.internal.shadowed.jackson.databind.ObjectMapper;
 import java.io.File;
 import java.io.IOException;
 
+import static org.junit.Assert.assertEquals;
+
 @SuppressWarnings("java:S2142")
 public class ArraysJsonParserExample {
 
@@ -62,5 +64,21 @@ public class ArraysJsonParserExample {
         System.out.println(commonJsonParserExample.getModelsInfo());
         System.out.println(commonJsonParserExample.getSecondElModelsInfo());
         System.out.println(commonJsonParserExample.getSecondElModelsInfoValueOf());
+
+//      passed - with String getSecondElModelsInfoValueOf()
+        assertEquals(commonJsonParserExample.getSecondElModelsInfoValueOf(), "\"Mustang\"");
+
+        //JsonNode - commonJsonParserExample.getNameInfo()
+        //Error   ...jackson.databind.node.TextNode<"Ford"> but was: java.lang.String<"Ford">
+//        assertEquals(commonJsonParserExample.getNameInfo(), "\"Ford\"");
+
+        // passed - with toString()
+        assertEquals(commonJsonParserExample.getNameInfo().toString(), "\"Ford\"");
+
+        // passed
+        assertEquals(commonJsonParserExample.getAgeInfo(), 30);
+
+        // passed - with toString()
+        assertEquals(commonJsonParserExample.getModelsInfo().toString(), "[\"Fiesta\",\"Focus\",\"Mustang\"]");
     }
 }

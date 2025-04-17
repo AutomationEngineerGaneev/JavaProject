@@ -65,8 +65,6 @@ public class User {
 
     }
 
-
-
     public static void main(String[] args) throws IOException {
         User user = new User();
         System.out.println("1." + user.jsonUser());

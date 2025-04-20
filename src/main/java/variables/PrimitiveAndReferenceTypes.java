@@ -2,14 +2,6 @@ package variables;
 
 public class PrimitiveAndReferenceTypes {
 
-
-
-
-
-
-
-
-
 //    Примитивные и ссылочные типы
 
 //    Integer и int

@@ -23,8 +23,12 @@ public class Circle extends Shape {
         return 2 * Math.PI * radius;
     }
 
-//    И второй вариант используется для обращения к переменным либо методам суперкласса,
+    //    И второй вариант используется для обращения к переменным либо методам суперкласса,
 //    чаще всего скрываемыми членами подкласса:
+    public void getMethodWithSuper() {
+        super.getMethodWithSuper(); // Call the superclass method
+        System.out.println("Display");
+    }
 
 
     public static void main(String[] args) {

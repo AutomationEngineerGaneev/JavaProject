@@ -27,3 +27,4 @@ public enum WEEKDAY {
         System.out.println(WEEKDAY.MONDAY);
     }
 }
+

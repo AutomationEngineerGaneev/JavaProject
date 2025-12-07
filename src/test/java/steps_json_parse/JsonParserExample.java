@@ -43,7 +43,6 @@ public class JsonParserExample {
         }
     }
 
-
     public Map<String, Object> getInfoMap() throws IOException {
 
         ObjectMapper mapper = new ObjectMapper();

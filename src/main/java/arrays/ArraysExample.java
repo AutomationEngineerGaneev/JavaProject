@@ -48,7 +48,7 @@ public class ArraysExample {
         nums[3] = 100;
 
         // получаем значение третьего элемента массива
-        System.out.println("3-ий элемент массива:" + " " +nums[2]);    // 4
+        System.out.println("3-ий элемент массива:" + " " + nums[2]);    // 4
     }
 
     //Многомерные массивы
@@ -61,7 +61,7 @@ public class ArraysExample {
         // А числа в скобках - на количество строк и столбцов.
         // И также, используя индексы, мы можем использовать элементы массива в программе:
         // установим элемент первого столбца второй строки
-        nums2[1][0]=44;
+        nums2[1][0] = 44;
         System.out.println(nums2[1][0]);
 
         //Объявление трехмерного массива могло бы выглядеть так:
@@ -80,27 +80,27 @@ public class ArraysExample {
 //        }
         //В качестве контейнера в данном случае выступает массив данных типа int.
         // Затем объявляется переменная с типом int
-        int[] array = new int[] { 1, 2, 3, 4, 5 };
-        for (int i : array){
+        int[] array = new int[]{1, 2, 3, 4, 5};
+        for (int i : array) {
             System.out.println("Массив данных типа int" + " " + i);
         }
 
 //        То же самое можно было бы сделать и с помощью обычной версии for:
-        int[] array1 = new int[] { 1, 2, 3, 4, 5 };
-        for (int i = 0; i < array1.length; i++){
+        int[] array1 = new int[]{1, 2, 3, 4, 5};
+        for (int i = 0; i < array1.length; i++) {
             System.out.println("Массив данных типа int  c length:" + " " + array1[i]);
         }
 
         //В то же время эта версия цикла for более гибкая по сравнению for (int i : array).
         // В частности, в этой версии мы можем изменять элементы:
-        int[] array2 = new int[] { 1, 2, 3, 4, 5 };
-        for (int i=0; i<array2.length;i++){
+        int[] array2 = new int[]{1, 2, 3, 4, 5};
+        for (int i = 0; i < array2.length; i++) {
             array2[i] = array2[i] * 2;
             System.out.println("Массив данных типа int  c * 2:" + " " + array2[i]);
         }
     }
 
-        public static void main(String[] args) {
+    public static void main(String[] args) {
         ArraysExample arraysExample = new ArraysExample();
         arraysExample.arraysExampleFirst();
         arraysExample.arraysExampleSecond();

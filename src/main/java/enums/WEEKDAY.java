@@ -1,5 +1,6 @@
 package enums;
 
+
 // create the enum
 public enum WEEKDAY {
 

@@ -98,12 +98,19 @@ public enum WEEKDAY {
 //
 //        System.out.println("Номер месяца в квартале: " + monthInQuarter);
 
-        LocalDateTime now = LocalDateTime.now();
-        // Используем Locale для форматирования
+//        LocalDateTime now = LocalDateTime.now();
+//        // Используем Locale для форматирования
+//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE", new Locale("ru", "RU"));
+//        String dayCurrent = now.format(formatter);
+//        System.out.println(dayCurrent);
+//        String dayCurrentUpper = dayCurrent.substring(0, 1).toUpperCase() + dayCurrent.substring(1);
+//        System.out.println("Текущий день недели: " + dayCurrentUpper);
+
+        LocalDateTime date = LocalDateTime.now().plusDays(Integer.parseInt("1"));
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE", new Locale("ru", "RU"));
-        String dayCurrent = now.format(formatter);
+        String dayCurrent = date.format(formatter);
         System.out.println(dayCurrent);
-        String dayCurrentUpper = dayCurrent.substring(0, 1).toUpperCase() + dayCurrent.substring(1);
-        System.out.println("Текущий день недели: " + dayCurrentUpper);
+        String dayUpper = dayCurrent.substring(0, 1).toUpperCase() + dayCurrent.substring(1);
+        System.out.println("День недели: " + dayUpper);
     }
 }

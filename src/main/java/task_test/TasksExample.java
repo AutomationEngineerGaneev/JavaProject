@@ -4,7 +4,20 @@ import java.util.Arrays;
 
 public class TasksExample {
     public static void main(String[] args) {
-//        1
+
+//        0.
+
+        String text1 = "тестовое задание по java";
+        String word1 = "java";
+
+        // Простой поиск подстроки
+        boolean isFound = text1.contains(word1);
+
+        System.out.println("Слово найдено: " + isFound);
+
+
+
+//        1.
         String text = "яблоко,банан,груша,апельсин";
         String target = "груша";
 

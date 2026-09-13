@@ -18,6 +18,7 @@ public class TasksExample {
 
 
 //        1.
+//        Stream API
         String text = "яблоко,банан,груша,апельсин";
         String target = "груша";
 
@@ -26,11 +27,11 @@ public class TasksExample {
                 .findFirst()
                 .orElse(null);
 
-        System.out.println(found);
+        System.out.println("По Stream API Слово найдено: " + found);
 
 //
 //
-//      2
+//      2.
 
 
         String str = "I love Java";

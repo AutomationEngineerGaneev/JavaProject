@@ -10,7 +10,7 @@ public class JsonCheckValue {
 
     @Test
     void testCountTaskId() throws Exception {
-        // Читаем JSON из файла (положите его в src/test/resources/tasks.json)
+        // Читаем JSON из файла
         File jsonFile = new File("src/test/resources/api-response.json");
 
         // Извлекаем все значения TaskId из каждого объекта массива
